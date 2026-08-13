@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>John Doe | Frontend Developer</title>
+    <style>
+      :root {
+        --bg: #f4f7fb;
+        --card: #ffffff;
+        --primary: #1f2937;
+        --accent: #2563eb;
+        --text: #374151;
+        --muted: #6b7280;
+        --border: #e5e7eb;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      header,
+      main,
+      footer {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+      }
+
+      nav h1 {
+        margin: 0;
+        font-size: 2rem;
+        color: var(--primary);
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: var(--primary);
+        font-weight: 600;
+      }
+
+      .hero {
+        padding: 20px 0 40px;
+      }
+
+      .hero h2 {
+        margin: 0;
+        font-size: 2.4rem;
+        color: var(--primary);
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: 260px 1.5fr 1fr;
+        gap: 24px;
+        align-items: start;
+        padding: 20px 0 40px;
+      }
+
+      .project,
+      .experience,
+      .education,
+      .card-container,
+      .contacts {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 20px;
+      }
+
+      .project ul {
+        margin: 0;
+        padding-left: 18px;
+      }
+
+      .project li {
+        margin-bottom: 10px;
+      }
+
+      .content {
+        padding: 20px 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .content:last-child {
+        border-bottom: none;
+      }
+
+      .content-title {
+        margin-top: 0;
+        color: var(--primary);
+      }
+
+      .links {
+        display: inline-block;
+        margin-top: 10px;
+        color: var(--accent);
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .education ul {
+        margin: 12px 0 0;
+        padding-left: 18px;
+      }
+
+      .reviews {
+        padding: 40px 0;
+      }
+
+      .reviews h2 {
+        margin-bottom: 20px;
+        color: var(--primary);
+      }
+
+      .card-container {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+        background: transparent;
+        border: none;
+        padding: 0;
+      }
+
+      .card-container figure {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 20px;
+        margin: 0;
+      }
+
+      .card-container h4 {
+        margin: 16px 0 8px;
+        color: var(--primary);
+      }
+
+      .contacts {
+        margin-bottom: 40px;
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        gap: 24px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      label {
+        display: flex;
+        flex-direction: column;
+        font-weight: 600;
+        color: var(--primary);
+      }
+
+      input,
+      textarea,
+      button {
+        margin-top: 8px;
+        padding: 12px 14px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        font: inherit;
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 120px;
+      }
+
+      button {
+        width: fit-content;
+        background: var(--accent);
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-weight: 600;
+      }
+
+      footer p {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--muted);
+      }
+
+      @media (max-width: 860px) {
+        nav,
+        .grid-container,
+        .contacts,
+        .card-container {
+          grid-template-columns: 1fr;
+          display: grid;
+        }
+
+        nav {
+          justify-content: flex-start;
+        }
+
+        nav ul {
+          flex-wrap: wrap;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav aria-label="Main navigation">
+        <h1>John Doe</h1>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#articles">Articles</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <section class="hero" id="home">
+        <h2>Frontend Developer</h2>
+      </section>
+    </header>
+
+    <main>
+      <article class="grid-container" aria-label="Profile information">
+        <aside class="project" id="projects">
+          <h3>Projects</h3>
+          <ul>
+            <li>HTML Only Portfolio</li>
+            <li>Calculator</li>
+            <li>Quiz App</li>
+            <li>Countdown Timer</li>
+            <li>Product Upcoming Page</li>
+          </ul>
+        </aside>
+
+        <section class="experience" aria-label="Professional experience">
+          <div class="content">
+            <h3 class="content-title">Roadmap.sh</h3>
+            <p>
+              Solved all frontend projects with a focus on clean UI, responsive
+              design, and practical implementation.
+            </p>
+            <a href="#contact" class="links">Visit my profile</a>
+          </div>
+
+          <div class="content">
+            <h3 class="content-title">OpenSourceWork</h3>
+            <p>
+              Contributed to 50 open-source projects and built personal projects
+              that received 200 GitHub stars.
+            </p>
+            <a href="#contact" class="links">Visit my GitHub profile</a>
+          </div>
+        </section>
+
+        <section class="education" aria-label="Education details">
+          <div class="content">
+            <p>
+              Graduated with a 3.76 out of 4 CGPA. Won the Acme Hackathon and
+              organized 30 sessions.
+            </p>
+
+            <p><strong>Courses taken</strong></p>
+            <ul>
+              <li>Object-Oriented Programming</li>
+              <li>Data Structures and Algorithms</li>
+              <li>Web Engineering</li>
+              <li>Artificial Intelligence</li>
+              <li>Human-Computer Interaction</li>
+              <li>Computer Graphics</li>
+              <li>Database Management Systems</li>
+              <li>Distributed Database Systems</li>
+              <li>Discrete Mathematics</li>
+            </ul>
+          </div>
+        </section>
+      </article>
+
+      <section class="reviews" aria-label="Teacher reviews">
+        <h2>Reviews from my Teachers</h2>
+
+        <div class="card-container">
+          <figure>
+            <blockquote>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla
+              quisquam eveniet atque doloremque tenetur.
+            </blockquote>
+            <h4>Mark Cannaley</h4>
+            <span>Assistant Professor</span>
+          </figure>
+
+          <figure>
+            <blockquote>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla
+              quisquam eveniet atque doloremque tenetur.
+            </blockquote>
+            <h4>Yuri Samiki</h4>
+            <span>Assistant Professor</span>
+          </figure>
+
+          <figure>
+            <blockquote>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla
+              quisquam eveniet atque doloremque tenetur.
+            </blockquote>
+            <h4>Ellen Smethir</h4>
+            <span>Assistant Professor</span>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer class="contacts" id="contact">
+      <form action="#" method="post">
+        <label>
+          Name
+          <input
+            type="text"
+            name="name"
+            placeholder="Enter your name"
+            required
+          />
+        </label>
+
+        <label>
+          Email
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+        </label>
+
+        <label>
+          Message
+          <textarea
+            name="message"
+            placeholder="Write your message here..."
+            required
+          ></textarea>
+        </label>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <p>© 2026 All rights reserved.</p>
+    </footer>
+  </body>
+</html>
